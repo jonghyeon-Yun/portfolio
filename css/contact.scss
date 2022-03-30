@@ -1,0 +1,59 @@
+@charset "UTF-8";
+@import "./basic.scss";
+.main3_css{
+  width: inherit;
+  height: 900px;
+  background-color: rgb(150,150,150);
+}
+.contact_div{
+  width: inherit;
+  height: 400px;
+  margin-top: 150px;
+  & > span{
+    width: 600px;
+    box-sizing: border-box;
+    height: inherit;
+    margin: 0 auto;
+    display: block;
+    border: 4px double white;
+    border-radius: 20px;
+    background-color: black;
+    & > p{
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      margin-left: 20px;
+      height: 50px;
+    }
+    & > ul{
+      width: 300px;
+      height: 240px;
+      color: white;
+      list-style: none;
+      margin: 0 0 0 20px;
+      padding: 80px 0 0 0;
+      float: left;
+      & > li{
+        font-size: 20px;
+      }
+      & > li:nth-of-type(3){
+        margin-top: 30px;
+      }
+      & > li:nth-of-type(odd){
+        color: gray;
+      }
+    }
+    & > label{
+      display: block;
+      background-color: bisque;
+      width: 240px;
+      height: 240px;
+      float: left;
+      & > img{
+        width: 240px;
+        height: 240px;
+        border-radius: 20px;
+      }
+    }
+  }
+}
