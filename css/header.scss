@@ -1,10 +1,18 @@
 @charset "UTF-8";
 @import "./basic.scss";
+@media screen and (min-width:480px) and (max-width:1800px){
+  .header_css{
+    width: 30%;
+  }
+  .header_div{
+    background-color: red
+  }
+}
 body{
   @include body;
 }
 .header_div{
-  @include object(1600px, 80px, "", relative);
+  @include object(100%, 80px, "", relative);
   overflow: hidden;
   background-color: rgba(0,0,0,0.4);
 }
@@ -16,6 +24,18 @@ body{
   height: 900px;
   & > img{ 
     position: absolute;
+    width: 100%;
+    height: 900px;
+  }
+}
+.blink {
+  animation: blink 0.5s infinite;
+  font-size: 2.5rem;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
   }
 }
 .header_ul{
@@ -24,7 +44,7 @@ body{
   padding: 0;
   list-style: none;
   float: right;
-  right: -750px;
+  right: -1000px;
   transition: all .5s ease-in-out;
   & > li{
     float: left;
@@ -299,26 +319,55 @@ $arrow-line-width: 4px;
 }
 .header_main{
   position: relative;
-  width: 800px;
+  width: 100%;
   height: 740px;
   color: white;
   margin: 0 auto;
   font-size: 45px;
   text-align: center;
+}
+.container{
   & > span{
     display: block;
-    width: inherit;
-    height: 200px;
+    width: auto;
+    height: auto;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: 75px;
+    left: 50px;
     margin: auto;
+    background-color: aquamarine;
+    font-size: 30px;
+    color: black;
+    text-transform: uppercase;
+    opacity: 0;
+    margin: 0;
+    line-height: 47px;
+    letter-spacing: 2px;
+    transform: skew(10deg, -5deg);
+    text-shadow: yellow 1px 1px, yellow 2px 2px, yellow 3px 3px, yellow 4px 4px;
+  }
+  & > span:nth-of-type(2){
+    top: 125px;
   }
 }
-
-
+.text_box{
+  width: inherit;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  & > span{
+    position: relative;
+  }
+  & > span:last-of-type{
+    color: aquamarine;
+  }
+}
 .header_bottom{
-  width: 1600px;
+  width: 100%;
   height: 80px;
   position: absolute;
   bottom: 100px;

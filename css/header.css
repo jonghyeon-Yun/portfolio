@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@media screen and (min-width: 480px) and (max-width: 1800px) {
+  .header_css {
+    width: 30%;
+  }
+  .header_div {
+    background-color: red;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +19,7 @@ body {
 }
 
 .header_div {
-  width: 1600px;
+  width: 100%;
   height: 80px;
   display: "";
   position: relative;
@@ -29,6 +38,26 @@ body {
 
 .header_css > img {
   position: absolute;
+  width: 100%;
+  height: 900px;
+}
+
+.blink {
+  -webkit-animation: blink 0.5s infinite;
+          animation: blink 0.5s infinite;
+  font-size: 2.5rem;
+}
+
+@-webkit-keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
 }
 
 .header_ul {
@@ -40,7 +69,7 @@ body {
   padding: 0;
   list-style: none;
   float: right;
-  right: -750px;
+  right: -1000px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -480,7 +509,7 @@ body {
 
 .header_main {
   position: relative;
-  width: 800px;
+  width: 100%;
   height: 740px;
   color: white;
   margin: 0 auto;
@@ -488,18 +517,52 @@ body {
   text-align: center;
 }
 
-.header_main > span {
+.container > span {
   display: block;
-  width: inherit;
-  height: 200px;
+  width: auto;
+  height: auto;
   position: absolute;
-  top: 0;
+  top: 75px;
+  left: 50px;
+  margin: auto;
+  background-color: aquamarine;
+  font-size: 30px;
+  color: black;
+  text-transform: uppercase;
+  opacity: 0;
+  margin: 0;
+  line-height: 47px;
+  letter-spacing: 2px;
+  -webkit-transform: skew(10deg, -5deg);
+          transform: skew(10deg, -5deg);
+  text-shadow: yellow 1px 1px, yellow 2px 2px, yellow 3px 3px, yellow 4px 4px;
+}
+
+.container > span:nth-of-type(2) {
+  top: 125px;
+}
+
+.text_box {
+  width: inherit;
+  height: 100px;
+  position: absolute;
+  top: -50px;
   bottom: 0;
+  left: 0;
+  right: 0;
   margin: auto;
 }
 
+.text_box > span {
+  position: relative;
+}
+
+.text_box > span:last-of-type {
+  color: aquamarine;
+}
+
 .header_bottom {
-  width: 1600px;
+  width: 100%;
   height: 80px;
   position: absolute;
   bottom: 100px;

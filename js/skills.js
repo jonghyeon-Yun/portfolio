@@ -20,4 +20,20 @@ $(function(){
     var $a = $(this).index();
     $("#skills_id > label").eq($a).css("background","white");
   });
+
+  $("#skills_id > label").click(function(){
+    var $a = $(this).index();
+    if($(".skills_div2 > span").eq($a).css("display") == "block"){
+      $("#skills_id").css("opacity","1");
+      $(".skills_div2 > span").css("display","none");
+      $(".skill_div3 > span").css("display", "none");
+    }
+    else{
+      $("#skills_id").css("opacity","0.3");
+      $(".skills_div2 > span").css("display","none");
+      $(".skills_div2 > span").eq($a).css("display","block");
+      $(".skill_div3 > span").css("display","none");
+      $(".skill_div3 > span").eq($a).css("display","block");
+    }
+  });
 });
